@@ -1,5 +1,5 @@
 unless EditableForm
-  EditableForm = $.fn.editableform.Constructor
+  EditableForm = jQuery.fn.editableform.Constructor
   EditableForm.prototype.saveWithUrlHook = (value) ->
     originalUrl   = @options.url
     model         = @options.model
@@ -38,7 +38,7 @@ unless EditableForm
         delete params.value
         delete params.pk
 
-        $.ajax($.extend({
+        jQuery.ajax(jQuery.extend({
           url:      originalUrl
           data:     params
           type:     'PUT'
